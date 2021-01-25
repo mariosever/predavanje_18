@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Database web app</title>
+</head>
+<body>
+
+<h1>Database web app</h1>
+
+{% if user %}
+    <p>Hello, {{user.name}}</p>
+    <p>This is your email: {{user.email}}</p>
+{% else %}
+    <form method="post" action="/login">
+        <input type="text" name="user-name" placeholder="Enter your name">
+        <br>
+        <input type="email" name="user-email" placeholder="Enter your email">
+        <br>
+        <button>Submit</button>
+    </form>
+{% endif %}
+
+</body>
+</html>
